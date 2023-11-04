@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.chart-container {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.chart-container:hover {
+    transform: scale(5); /* Enlarge the chart container on hover */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Increase shadow on hover */
+}
+
+/* Add keyframes animation for the chart container */
+@keyframes pulseAnimation {
+    0% {
+        transform: scale(1.5);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.chart-container:hover {
+    animation: pulseAnimation 1s infinite; /* Apply pulse animation on hover */
+}
+
